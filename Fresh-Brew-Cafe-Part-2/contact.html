@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fresh Brew Cafe - fresh coffee, food, pastries and a welcoming cafe experience.">
+    <title>Contact Us | Fresh Brew Cafe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <a class="brand" href="index.html">
+            <img src="images/cappuccino.png" alt="Fresh Brew Cafe cappuccino">
+            <div class="brand-text">
+                <h1>Fresh Brew Cafe</h1>
+                <p>Fresh Coffee  Good Food  Great Moments</p>
+            </div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="">Home</a></li>
+                <li><a href="about.html" class="">About</a></li>
+                <li><a href="menu.html" class="">Menu</a></li>
+                <li><a href="specials.html" class="">Specials</a></li>
+                <li><a href="gallery.html" class="">Gallery</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+
+<section class="contact">
+    <div class="container">
+        <h2 class="section-title">Contact Fresh Brew Cafe</h2>
+        <p class="section-intro">Have a question, want to place an order or planning a visit? Send us your details below.</p>
+        <form action="#" method="post">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+
+            <label for="order">What would you like?</label>
+            <select id="order" name="order">
+                <option value="">Select an option</option>
+                <option value="coffee">Coffee</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Light Meal</option>
+                <option value="treats">Treats & Desserts</option>
+                <option value="custom">Other Request</option>
+            </select>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Tell us what you would like or ask us a question..." required></textarea>
+
+            <button type="submit">SEND MESSAGE</button>
+            <button type="reset">CLEAR FORM</button>
+        </form>
+    </div>
+</section>
+
+</main>
+<footer>
+    <div class="container">
+        <h2>Fresh Brew Cafe</h2>
+        <p>Fresh Coffee  Good Food  Great Moments</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a> |
+            <a href="about.html">About</a> |
+            <a href="menu.html">Menu</a> |
+            <a href="specials.html">Specials</a> |
+            <a href="gallery.html">Gallery</a> |
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <p>Email: <a href="mailto:hello@freshbrewcafe.co.za">hello@freshbrewcafe.co.za</a></p>
+        <p>Phone: <a href="tel:+27111234567">+27 11 123 4567</a></p>
+        <p style="margin-top:20px;">&copy; 2026 Fresh Brew Cafe. All Rights Reserved.</p>
+    </div>
+</footer>
+</body>
+</html>

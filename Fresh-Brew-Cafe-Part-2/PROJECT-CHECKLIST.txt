@@ -1,0 +1,14 @@
+Fresh Brew Cafe - Part 2 Checklist
+
+[✓] Main Home page: index.html
+[✓] About page: about.html
+[✓] Menu page: menu.html
+[✓] Specials page: specials.html
+[✓] Gallery page: gallery.html
+[✓] Contact Us page: contact.html
+[✓] External stylesheet: style.css
+[✓] Images folder
+[✓] README.md
+[✓] Responsive design
+[✓] Navigation links between pages
+[✓] Part 1 original HTML backup

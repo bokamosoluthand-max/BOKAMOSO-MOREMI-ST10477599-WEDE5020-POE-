@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fresh Brew Cafe | Fresh Coffee & Good Food</title>
+
+    <meta name="description"
+          content="Freshly brewed coffee, homemade treats and a warm place to slow down. Come for the coffee, stay for the atmosphere.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #fff8ef;
+            color: #3a173d;
+            line-height: 1.6;
+        }
+
+        /* ---------- HEADER ---------- */
+
+        header {
+            background: #234b18;
+            color: white;
+            border-bottom: 5px solid #91d945;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 12px 6%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .brand img {
+            width: 75px;
+            height: 75px;
+            object-fit: contain;
+            background: white;
+            border-radius: 50%;
+        }
+
+        .brand-text h1 {
+            font-family: Georgia, serif;
+            font-size: 1.8rem;
+            color: #f6e19a94;
+        }
+
+        .brand-text p {
+            font-size: 0.85rem;
+            color: #fff2dc;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 9px 13px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background: #d945c0;
+            color: #3d1732;
+        }
+
+        /* ---------- HERO ---------- */
+
+        .hero {
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 70px 8%;
+            color: white;
+            background:
+                linear-gradient(rgba(13, 50, 10, 0.6), rgba(35, 50, 10, 0.6)),
+                url("images/cafe-hero.jpeg") center/cover no-repeat;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h2 {
+            font-family: Georgia, serif;
+            font-size: clamp(2.8rem, 6vw, 5.5rem);
+            line-height: 1;
+            margin-bottom: 22px;
+            color: #ffebf2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 25px 6px 0;
+            padding: 14px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            background: #8d570b;
+            color: #513d32;
+        }
+
+        .button:hover {
+            background: white;
+        }
+
+        /* ---------- GENERAL ---------- */
+
+        section {
+            padding: 75px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: Georgia, serif;
+            color: #713817;
+            font-size: 2.6rem;
+            margin-bottom: 12px;
+        }
+
+        .section-intro {
+            max-width: 750px;
+            margin: 0 auto 35px;
+            text-align: center;
+            color: #456d63;
+        }
+
+        /* ---------- ABOUT ---------- */
+
+        .about {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 430px;
+            object-fit: cover;
+            border-radius: 20px;
+            border: 7px solid #8dcee8;
+        }
+
+        .about-text h3 {
+            font-family: Georgia, serif;
+            color: #1f638a;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+        }
+
+        /* ---------- MENU ---------- */
+
+        .menu-section {
+            background: #c3f3f2;
+        }
+
+        .cards {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(70, 35, 15, .15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 245px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 24px;
+        }
+
+        .card h3 {
+            color: #712517;
+            font-family: Georgia, serif;
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .price {
+            color: #a82720;
+            font-weight: bold;
+            font-size: 1.15rem;
+            margin-top: 12px;
+        }
+
+        /* ---------- SPECIALS ---------- */
+
+        .specials {
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .special-box {
+            display: inline-block;
+            vertical-align: top;
+            width: 42%;
+            min-width: 280px;
+            margin: 10px;
+            padding: 32px;
+            background: #69572f;
+            color: white;
+            border-radius: 18px;
+            border-top: 7px solid #d9d245;
+        }
+
+        .special-box h3 {
+            color: #f6f39a;
+            font-family: Georgia, serif;
+            font-size: 1.6rem;
+        }
+
+    
+
+        .gallery {
+            background: #fffaf3;
+        }
+
+        .gallery-grid {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 16px;
+            border: 4px solid #dbe580;
+            transition: .3s;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.03);
+        }
+
+    
+
+        .contact {
+            background: #776c5e;
+        }
+
+        form {
+            max-width: 720px;
+            margin: 30px auto 0;
+            padding: 35px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(18, 7, 1, 0.986);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            color: #713817;
+            margin-bottom: 5px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 13px;
+            margin-bottom: 18px;
+            border: 2px solid #9d7544;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #945f31;
+        }
+
+        button {
+            border: none;
+            padding: 13px 22px;
+            border-radius: 25px;
+            background: #471d05;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-right: 8px;
+        }
+
+        button:hover {
+            background: #4f2505;
+        }
+
+        /* ---------- FOOTER ---------- */
+
+        footer {
+            background: #2e190f;
+            color: white;
+            text-align: center;
+            padding: 55px 8%;
+            border-top: 5px solid #3d2709;
+        }
+
+        footer h2 {
+            font-family: Georgia, serif;
+            color: #ee9f1f;
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #ffa718;
+            text-decoration: none;
+        }
+
+        .footer-links {
+            margin: 22px 0;
+        }
+
+    
+
+        @media (max-width: 850px) {
+            .header-container {
+                flex-direction: column;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 550px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .special-box {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .hero {
+                min-height: 560px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-container">
+
+        <div class="brand">
+            <!-- YOUR LOGO -->
+            <img src="images/cafe-logo.jpeg" alt="Fresh Brew Cafe logo">
+
+            <div class="brand-text">
+                <h1>Fresh Brew Cafe</h1>
+                <p>Fresh Coffee  Good Food  Great Moments</p>
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#specials">Specials</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+    <!-- HOME -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h2>Your Daily Cup of Happiness</h2>
+
+            <p>
+                Welcome to Fresh Brew Cafe, where the smell of freshly baked bread,
+                beautiful cakes and delicious pastries brings people together.
+            </p>
+
+            <a class="button" href="#menu">View Our Menu</a>
+            <a class="button" href="#contact">Order Your Favourite</a>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="about">
+
+            <h2 class="section-title">About Fresh Brew Cafe</h2>
+
+            <p class="section-intro">
+                At Fresh Brew Cafe, we believe a great cup of coffee can turn an ordinary day into a good one.
+                We combine quality ingredients, carefully prepared drinks and friendly service to create
+                a comfortable cafe experience for everyone.
+            </p>
+
+            <div class="about-grid">
+
+                <div class="about-image">
+                    <img src="images/pastry-display.jpeg"
+                         alt="Fresh pastries displayed inside Fresh Brew Cafe">
+                </div>
+
+                <div class="about-text">
+                    <h3>Freshly Made, Just for You</h3>
+
+                    <p>
+                        Fresh Brew Cafe is a local cafe focused on fresh bread,
+                        handmade pastries and beautiful cakes for every occasion.
+                    </p>
+
+                    <p>
+                        Whether you are grabbing a coffee before class, meeting friends, taking a break from work
+                        or simply looking for something delicious, there is something for you at Fresh Brew Cafe.
+                    </p>
+
+                    <p>
+                        <strong>Our mission:</strong>
+                        To serve great coffee and fresh food at affordable prices while creating
+                        a warm, welcoming space where customers enjoy coming back.
+                    </p>
+
+                    <p>
+                        <strong>Our vision:</strong>
+                        To become a favourite local cafe known for quality drinks, delicious food,
+                        a relaxed atmosphere and friendly customer service.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="menu-section" id="menu">
+
+        <h2 class="section-title">Our Menu</h2>
+
+        <p class="section-intro">
+            Explore a few of our favourite drinks and cafe treats, prepared fresh and served with care.
+        </p>
+
+        <div class="cards">
+
+            <article class="card">
+                <img src="images/artisan-bread.jpeg"
+                     alt="Fresh artisan bread">
+                <div class="card-content">
+                    <h3>Classic Cappuccino</h3>
+                    <p>
+                        Smooth espresso topped with steamed milk and a soft layer of creamy foam. A timeless cafe favourite.
+                    </p>
+                    <p class="price">R35</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="images/chocolate-cake.jpeg"
+                     alt="Rich chocolate cake">
+                <div class="card-content">
+                    <h3>Iced Caramel Latte</h3>
+                    <p>
+                        A refreshing iced coffee blended with smooth milk and sweet caramel for an easy-drinking favourite.
+                    </p>
+                    <p class="price">R45</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="images/cream-pastries.jpeg"
+                     alt="Fresh Brew Cafe baked treat">
+                <div class="card-content">
+                    <h3>Fresh Berry Muffin</h3>
+                    <p>
+                        A soft, freshly baked muffin packed with fruity flavour. Perfect with your favourite hot drink.
+                    </p>
+                    <p class="price">R30</p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- SPECIALS -->
+    <section id="specials">
+
+        <div class="specials">
+
+            <h2 class="section-title">Fresh Brew Specials</h2>
+
+            <p class="section-intro">
+                Make your cafe visit even better with one of our favourite Fresh Brew combinations.
+            </p>
+
+            <div class="special-box">
+                <h3>MORNING COMBO</h3>
+                <p>Any breakfast item + a regular coffee.</p>
+                <p><strong>Only R55</strong></p>
+            </div>
+
+            <div class="special-box">
+                <h3>COFFEE & MUFFIN DEAL</h3>
+                <p>Enjoy a freshly brewed coffee with a delicious muffin for a simple afternoon pick-me-up.</p>
+                <p><strong>Only R50</strong></p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery" id="gallery">
+
+        <h2 class="section-title">Fresh Brew Gallery</h2>
+
+        <p class="section-intro">
+            Take a look at the drinks, treats and cosy cafe moments waiting for you at Fresh Brew Cafe.
+        </p>
+
+        <div class="gallery-grid">
+
+            <img src="images/cafe-hero.jpeg"
+                 alt="Freshly brewed coffee at Fresh Brew Cafe">
+
+            <img src="images/chocolate-cake.jpeg"
+                 alt="Fresh Brew Cafe sweet treat">
+
+            <img src="images/artisan-bread.jpeg"
+                 alt="Freshly prepared cafe food">
+
+            <img src="images/pastry-display.jpeg"
+                 alt="Fresh Brew Cafe pastry display">
+
+            <img src="images/celebration-cake.jpeg"
+                 alt="Fresh Brew Cafe dessert">
+
+            <img src="images/cream-pastries.jpeg"
+                 alt="Fresh Brew Cafe baked treat">
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+
+        <h2 class="section-title">Contact Fresh Brew Cafe</h2>
+
+        <p class="section-intro">
+            Have a question, want to place an order or planning a visit? Send us your details below and we will get back to you.
+        </p>
+
+        <form action="#" method="post">
+
+            <label for="name">Full Name</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your full name"
+                required
+            >
+
+            <label for="email">Email Address</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email address"
+                required
+            >
+
+            <label for="phone">Phone Number</label>
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter your phone number"
+            >
+
+            <label for="order">What would you like?</label>
+            <select id="order" name="order">
+                <option value="">Select an option</option>
+                <option value="coffee">Coffee</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Light Meal</option>
+                <option value="treats">Treats & Desserts</option>
+                <option value="custom">Other Request</option>
+            </select>
+
+            <label for="message">Message</label>
+            <textarea
+                id="message"
+                name="message"
+                rows="6"
+                placeholder="Tell us what you would like or ask us a question..."
+                required
+            ></textarea>
+
+            <button type="submit">SEND MESSAGE</button>
+            <button type="reset">CLEAR FORM</button>
+
+        </form>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <h2>Fresh Brew Cafe</h2>
+
+    <p>Fresh Coffee  Good Food  Great Moments</p>
+
+    <div class="footer-links">
+        <a href="#home">Home</a> |
+        <a href="#about">About</a> |
+        <a href="#menu">Menu</a> |
+        <a href="#gallery">Gallery</a> |
+        <a href="#contact">Contact</a>
+    </div>
+
+    <p>
+        Email:
+        <a href="mailto:hello@freshbrewcafe.co.za">
+            hello@freshbrewcafe.co.za
+        </a>
+    </p>
+
+    <p>
+        Phone:
+        <a href="tel:+27110000000">
+            +27 11 123 4567
+        </a>
+    </p>
+
+    <p style="margin-top:20px;">
+        &copy; 2026 Fresh Brew Cafe. All Rights Reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
