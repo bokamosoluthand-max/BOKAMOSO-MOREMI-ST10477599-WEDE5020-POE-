@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bokamosoluthand-max.github.io/BOKAMOSO-MOREMI-ST10477599-WEDE5020-POE-/sitemap.xml

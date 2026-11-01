@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Fresh Brew Cafe with a general message, question or feedback. Complete the validated form to prepare an email to our team.">
+    <title>Contact Fresh Brew Cafe | Enquiries and Messages</title>
+    <meta name="keywords" content="contact Fresh Brew Cafe, cafe enquiries">
+    <meta name="author" content="Bokamoso Moremi">
+    <meta name="robots" content="index, follow">
+    <meta property="og:site_name" content="Fresh Brew Cafe">
+    <meta property="og:title" content="Contact Fresh Brew Cafe | Enquiries and Messages">
+    <meta property="og:description" content="Contact Fresh Brew Cafe with a general message, question or feedback. Complete the validated form to prepare an email to our team.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#471d05">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <a class="brand" href="index.html">
+            <img loading="lazy" src="images/cappuccino.png" alt="Fresh Brew Cafe cappuccino">
+            <div class="brand-text">
+                <h1>Fresh Brew Cafe</h1>
+                <p>Fresh Coffee • Good Food • Great Moments</p>
+            </div>
+        </a>
+        <nav aria-label="Main navigation">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation"><span aria-hidden="true">☰</span> Menu</button>
+            <ul id="primary-navigation">
+                <li><a href="index.html" class="">Home</a></li>
+                <li><a href="about.html" class="">About</a></li>
+                <li><a href="menu.html" class="">Menu</a></li>
+                <li><a href="specials.html" class="">Specials</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="gallery.html" class="">Gallery</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+
+<section class="contact">
+    <div class="container">
+        <h2 class="section-title">Contact Fresh Brew Cafe</h2>
+        <p class="section-intro">Use this form for a general message, feedback or question. For pricing and availability, use our Enquiry page.</p>
+        <form id="contact-form" action="mailto:hello@freshbrewcafe.co.za" method="post" enctype="text/plain">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" minlength="2" maxlength="80" autocomplete="name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" maxlength="120" autocomplete="email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="e.g. 082 123 4567" minlength="7" maxlength="20" autocomplete="tel">
+
+            <label for="messageType">Type of message</label>
+            <select id="messageType" name="messageType" required>
+                <option value="">Select message type</option>
+                <option value="General question">General question</option>
+                <option value="Feedback">Feedback</option>
+                <option value="Complaint">Complaint</option>
+                <option value="Other message">Other message</option>
+            </select>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" minlength="10" maxlength="1500" placeholder="Write your message (10–1500 characters)..." required></textarea>
+
+            <p class="form-note">After validation, your default email app will open with the message prepared. You must press Send in your email app.</p>
+            <p class="form-feedback" role="status" aria-live="polite"></p>
+            <button type="submit">PREPARE EMAIL</button>
+            <button type="reset">CLEAR FORM</button>
+        </form>
+    </div>
+</section>
+
+</main>
+<footer>
+    <div class="container">
+        <h2>Fresh Brew Cafe</h2>
+        <p>Fresh Coffee • Good Food • Great Moments</p>
+        <div class="footer-links">
+            <a href="index.html">Home</a> |
+            <a href="about.html">About</a> |
+            <a href="menu.html">Menu</a> |
+            <a href="specials.html">Specials</a> | <a href="enquiry.html">Enquiry</a> |
+            <a href="gallery.html">Gallery</a> |
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <p>Email: <a href="mailto:hello@freshbrewcafe.co.za">hello@freshbrewcafe.co.za</a></p>
+        <p>Phone: <a href="tel:+27111234567">+27 11 123 4567</a></p>
+        <p style="margin-top:20px;">&copy; 2026 Fresh Brew Cafe. All Rights Reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
