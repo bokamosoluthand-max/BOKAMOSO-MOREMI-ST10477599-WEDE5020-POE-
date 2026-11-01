@@ -1,0 +1,491 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.2px;
+    color: #3a173d;
+    background: #fff8ef;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+}
+
+/* ---------- HEADER ---------- */
+header {
+    background: #234b18;
+    color: white;
+    border-bottom: 5px solid #91d945;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    width: min(1200px, 92%);
+    margin: auto;
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+}
+
+.brand img {
+    width: 68px;
+    height: 68px;
+    object-fit: cover;
+    background: white;
+    border-radius: 50%;
+}
+
+.brand-text h1 {
+    font-family: Georgia, serif;
+    font-size: 1.7rem;
+    line-height: 1.2;
+    color: #f6e19a;
+}
+
+.brand-text p {
+    font-size: 0.82rem;
+    color: #fff2dc;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    justify-content: center;
+}
+
+nav a {
+    display: block;
+    color: white;
+    padding: 9px 13px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.25s ease;
+}
+
+nav a:hover,
+nav a.active {
+    background: #d945c0;
+    color: #3d1732;
+}
+
+/* ---------- GENERAL SECTIONS ---------- */
+section {
+    padding: 75px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-family: Georgia, serif;
+    color: #713817;
+    font-size: clamp(2rem, 4vw, 2.7rem);
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.section-intro {
+    max-width: 760px;
+    margin: 0 auto 35px;
+    text-align: center;
+    color: #456d63;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 70px 0;
+    color: white;
+    background:
+        linear-gradient(rgba(13, 50, 10, 0.62), rgba(35, 50, 10, 0.62)),
+        url("images/coffee-brewing.jpg") center/cover no-repeat;
+}
+
+.hero-content {
+    width: min(850px, 92%);
+}
+
+.hero h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    line-height: 1;
+    margin-bottom: 22px;
+    color: #ffebf2;
+}
+
+.hero p {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    max-width: 700px;
+    margin: auto;
+}
+
+.button {
+    display: inline-block;
+    margin: 25px 6px 0;
+    padding: 13px 24px;
+    border-radius: 30px;
+    font-weight: bold;
+    background: #f6e19a;
+    color: #513d32;
+    transition: 0.25s ease;
+}
+
+.button:hover {
+    background: white;
+    transform: translateY(-2px);
+}
+
+/* ---------- TWO-COLUMN CONTENT ---------- */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 7px solid #8dcee8;
+}
+
+.about-text h3 {
+    font-family: Georgia, serif;
+    color: #1f638a;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+}
+
+/* ---------- CARDS ---------- */
+.menu-section {
+    background: #c3f3f2;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(70, 35, 15, 0.15);
+    transition: 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 245px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 24px;
+}
+
+.card h3 {
+    color: #712517;
+    font-family: Georgia, serif;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.price {
+    color: #a82720;
+    font-weight: bold;
+    font-size: 1.15rem;
+    margin-top: 12px;
+}
+
+/* ---------- SPECIALS ---------- */
+.specials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.special-box {
+    padding: 32px;
+    background: #69572f;
+    color: white;
+    border-radius: 18px;
+    border-top: 7px solid #d9d245;
+    text-align: center;
+}
+
+.special-box h3 {
+    color: #f6f39a;
+    font-family: Georgia, serif;
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+}
+
+/* ---------- GALLERY ---------- */
+.gallery {
+    background: #fffaf3;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 4px solid #dbe580;
+    transition: 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+}
+
+/* ---------- CONTACT ---------- */
+.contact {
+    background: #776c5e;
+}
+
+form {
+    max-width: 720px;
+    margin: 30px auto 0;
+    padding: 35px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(18, 7, 1, 0.25);
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #713817;
+    margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 18px;
+    border: 2px solid #9d7544;
+    border-radius: 8px;
+    font: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #945f31;
+}
+
+button {
+    border: none;
+    padding: 13px 22px;
+    border-radius: 25px;
+    background: #471d05;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px 8px 0 0;
+}
+
+button:hover {
+    background: #4f2505;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    background: #2e190f;
+    color: white;
+    text-align: center;
+    padding: 45px 0;
+    border-top: 5px solid #3d2709;
+}
+
+footer h2 {
+    font-family: Georgia, serif;
+    color: #ee9f1f;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    margin: 20px 0;
+}
+
+.footer-links a {
+    color: #ffa718;
+    margin: 0 6px;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+@media (max-width: 900px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    .about-grid,
+    .specials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 15px;
+    }
+
+    section {
+        padding: 55px 0;
+    }
+
+    nav ul {
+        gap: 3px;
+    }
+
+    nav a {
+        padding: 7px 9px;
+        font-size: 0.9rem;
+    }
+
+    .brand-text h1 {
+        font-size: 1.45rem;
+    }
+
+    .hero {
+        min-height: 560px;
+    }
+
+    .cards,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid img {
+        height: 280px;
+    }
+
+    form {
+        padding: 24px;
+    }
+}
+
+
+/* ---------- PART 3: INTERACTION, ACCESSIBILITY AND PERFORMANCE ---------- */
+[hidden] { display: none !important; }
+:focus-visible { outline: 3px solid #e6a23c; outline-offset: 3px; }
+.nav-toggle { display: none; }
+.menu-controls {
+    max-width: 720px; margin: 0 auto 28px; padding: 22px;
+    background: #fff; border-radius: 14px; box-shadow: 0 5px 18px rgba(18,7,1,.12);
+}
+.menu-controls input, .menu-controls select { margin-bottom: 12px; }
+#menu-result-count { margin: 0; color: #471d05; font-weight: 700; }
+.gallery-grid img { cursor: zoom-in; }
+.lightbox {
+    position: fixed; inset: 0; z-index: 3000; display: flex; align-items: center;
+    justify-content: center; gap: 16px; padding: 24px;
+    background: rgba(18, 10, 6, .94); color: white;
+}
+.lightbox figure { margin: 0; text-align: center; max-width: min(85vw, 1100px); }
+.lightbox figure img { display: block; max-width: 100%; max-height: 78vh; width: auto; height: auto; object-fit: contain; margin: auto; border-radius: 10px; }
+.lightbox figcaption { margin-top: 12px; }
+.lightbox button { background: #fff8ef; color: #471d05; font-size: 1.35rem; min-width: 44px; min-height: 44px; }
+.lightbox .lightbox-close { position: absolute; right: 22px; top: 18px; font-size: 2rem; }
+body.lightbox-open { overflow: hidden; }
+.form-note { color: #60422e; font-size: .92rem; margin: 0 0 16px; }
+.form-feedback { font-weight: 700; margin: 12px 0; }
+.form-feedback.error { color: #a11b1b; }
+.form-feedback.success { color: #1e6b38; }
+.enquiry-result { margin-top: 24px; padding: 20px; border-left: 5px solid #e6a23c; border-radius: 10px; background: #fff4dd; }
+.accordion { max-width: 850px; margin: 24px auto; }
+.accordion-trigger { display: block; width: 100%; text-align: left; border-radius: 8px; margin: 8px 0 0; }
+.accordion-trigger[aria-expanded="true"] { background: #7a421c; }
+.accordion-panel { background: white; padding: 16px 20px; border-radius: 0 0 8px 8px; }
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity .45s ease, transform .45s ease; }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+img { max-width: 100%; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+  .reveal { opacity: 1; transform: none; }
+}
+@media (max-width: 700px) {
+  .header-container { align-items: stretch; gap: 12px; }
+  .brand { justify-content: center; }
+  .nav-toggle { display: block; width: 100%; margin: 6px 0; }
+  nav ul { display: none; flex-direction: column; align-items: stretch; width: 100%; gap: 5px; padding: 8px 0; }
+  nav ul.nav-open { display: flex; }
+  nav li { width: 100%; }
+  nav a { display: block; text-align: center; }
+  .lightbox { gap: 5px; padding: 12px; }
+  .lightbox figure { max-width: 78vw; }
+  .lightbox button { min-width: 38px; min-height: 42px; padding: 8px; }
+  .lightbox .lightbox-close { top: 8px; right: 8px; }
+}
